@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21-slim 
 COPY --from=build /target/MoviesApp-0.0.1-SNAPSHOT.jar MoviesApp.jar
 EXPOSE 8080
-ENTRYPOINT ["java","jar","MoviesApp.jar"]
+ENTRYPOINT ["java","-jar","MoviesApp.jar"]
